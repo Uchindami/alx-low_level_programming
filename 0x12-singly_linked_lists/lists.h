@@ -3,21 +3,20 @@
 
 /**
  * struct list_s - singly linked list
- * @str: str - (malloc'ed str)
- * @len: length of the str
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
  * @next: points to the next node
  *
- * Description: singly linked list node stru
+ * Description: singly linked list node struc
  * for Holberton project
  */
 typedef struct list_s
 {
-	char *str;               /* data stored in the node (str) */
-	unsigned int len;        /* length of the str */
-	struct list_s *next;     /* pointer to the next node */
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
-/* function prototypes */
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
