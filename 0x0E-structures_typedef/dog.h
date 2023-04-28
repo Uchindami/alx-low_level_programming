@@ -7,15 +7,14 @@
  * @age: Second member
  * @owner: Third member
  *
- * Description: 
+ * Description: Longer description
  */
 typedef struct dog
 {
-    char *name;
-    float age;
-    char *owner;
+	char *name;
+	float age;
+	char *owner;
 } dog_t;
-
 
 void init_dog(dog_t *d, char *name, float age, char *owner);
 void print_dog(const dog_t *d);
