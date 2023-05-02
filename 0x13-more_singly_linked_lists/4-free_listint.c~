@@ -1,0 +1,26 @@
+#include "lists.h"
+
+/**
+ * free_listint - Frees a linked list
+ * @head: Double pointer to the first element in the list
+ *
+ * Description: Frees a listint_t list.
+ */
+void free_listint(listint_t **head)
+{
+	listint_t *current, *temp;
+
+	if (head == NULL)
+		return;
+
+	current = *head;
+
+	while (current)
+	{
+		temp = current;
+		current = current->next;
+		free(temp);
+	}
+
+	*head = NULL;
+}
