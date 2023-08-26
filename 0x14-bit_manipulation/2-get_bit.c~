@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * get_bit - gives the value of a bit at given point
+ * @num: num to search
+ * @ind: index of the bit
+ *
+ * Return: value of the bit, or -1 if index is invalid
+ */
+int get_bit(unsigned long int num, unsigned int ind)
+{
+	if (ind > 63)
+		exit(EXIT_FAILURE);
+
+	return ((num >> ind) & 1);
+}
