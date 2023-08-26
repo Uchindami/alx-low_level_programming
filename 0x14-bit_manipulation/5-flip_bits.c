@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * flip_bits - calculates nums to change
- * to movefrom one point to another
+ * flip_bits - calculates the number of bits to change
+ * to move from one number to another
  * @firstnumber: first number
  * @secnum: second number
  *
@@ -12,11 +12,11 @@ unsigned int flip_bits(unsigned long int firstnumber, unsigned long int secnum)
 {
 	unsigned int count = 0;
 	unsigned long int exclusive = firstnumber ^ secnum;
+	unsigned int i;
 
-	for (int i = 0; i < 64; i++)
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		if ((exclusive >> i) & 1)
-			count++;
+		count += (exclusive >> i) & 1;
 	}
 
 	return (count);
