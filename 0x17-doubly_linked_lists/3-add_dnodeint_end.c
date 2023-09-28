@@ -8,17 +8,17 @@
  *
  *Return: point of the nEw or maybe NULL if it failed.
  */
-dlistint_t* add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t * entry_node;
+	dlistint_t *entry_node;
 	dlistint_t *holding = *head;
 
 	if (!head)
-		return NULL;
+		return (NULL);
 
 	entry_node = malloc(sizeof(dlistint_t));
 	if (!entry_node)
-		return NULL;
+		return (NULL);
 
 	entry_node->n = n;
 	entry_node->next = NULL;
@@ -36,5 +36,5 @@ dlistint_t* add_dnodeint_end(dlistint_t **head, const int n)
 	holding->next = entry_node;
 	entry_node->prev = holding;
 
-	return entry_node;
+	return (entry_node);
 }

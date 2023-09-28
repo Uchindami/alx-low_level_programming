@@ -6,18 +6,18 @@
  *@head: * to * of the Head
  *@n: The data value for the new node.
  *
- *Return: Location of new 
+ *Return: Location of new
  */
-dlistint_t* add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t * new_guy;
+	dlistint_t *new_guy;
 
 	if (!head)
-		return NULL;
+		return (NULL);
 
 	new_guy = malloc(sizeof(dlistint_t));
 	if (!new_guy)
-		return NULL;
+		return (NULL);
 
 	new_guy->n = n;
 	new_guy->prev = NULL;
@@ -28,5 +28,5 @@ dlistint_t* add_dnodeint(dlistint_t **head, const int n)
 
 	*head = new_guy;
 
-	return new_guy;
+	return (new_guy);
 }
